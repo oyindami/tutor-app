@@ -1,0 +1,24 @@
+<div class="text-center">
+  <h2>{{name}}</h2>
+  <p>{{grade}}</p>
+  <p>
+    <button class="btn btn-primary">Assign tutor</button>
+  </p>
+</div>
+
+
+{{#each Student as |Student|}}
+    <div class="row mb-2">
+      <div class="col-md-8">
+        <h4><a href="/Students/{{student.id}}">{{student.name}}{{student.grade}}</a></h4>
+      </div>
+      <div class="col-md-4">
+        <button class="btn btn-sm btn-danger" data-id="{{students.id}}">DELETE</button>
+      </div>
+    </div>
+    {{/each}}
+  </div>
+  {{/if}}
+</div>
+
+<script src="./js/studentData.js"></script>
